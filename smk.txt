@@ -1,0 +1,22 @@
+Sourcetree	//远程仓库拉去提交工具
+CocosCreator	//H5游戏开发引擎
+WebSroem		//JavaScript开发编辑器 前端开发	重置试用仓库地址:https://plugins.zhile.io
+HBuilderX //
+VS Code	//
+PyCharm	//python开发工具
+Navicat Premium	//数据库管理工具
+Postman	//接口测试工具
+FinalShell	//一体化的的服务器,网络管理软件
+Charles	//抓包工具
+MuMu	//mac可用手机模拟器
+ClashX	//翻墙工具
+devtools		//谷歌vue调试工具
+Wappalyzer	//谷歌查看视图扩展包
+texturePacker	//图集工具
+MasterGo 	//一站式产品设计工具 蓝湖
+
+
+http://code.ciaoca.com/	//前端开发仓库
+http://frontendjs.com/	//前站导航
+https://www.bootcdn.cn/mui/	//mui
+https://tinypng.com/	//图片压缩网站

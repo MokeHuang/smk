@@ -1,0 +1,18 @@
+
+
+/* 单行显示 */
+.clamp1{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* 两行显示 */
+.clamp2{
+	overflow: hidden; 
+	text-overflow: ellipsis;
+	display: -webkit-box; 
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+
