@@ -14,9 +14,14 @@ devtools		//谷歌vue调试工具
 Wappalyzer	//谷歌查看视图扩展包
 texturePacker	//图集工具
 MasterGo 	//一站式产品设计工具 蓝湖
+XAMPP 		//Mac 数据库工具
+WampServer	//windows 数据库工具
 
 
 http://code.ciaoca.com/	//前端开发仓库
 http://frontendjs.com/	//前站导航
 https://www.bootcdn.cn/mui/	//mui
 https://tinypng.com/	//图片压缩网站
+
+
+朴灵 《深入浅出node.js》

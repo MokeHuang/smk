@@ -21,14 +21,32 @@ npm i -g serve
 cd dist
 serve
 
+
+// 关闭密码验证  mysql
+skip-grant-tables
+// root设置新密码
+flush privileges;
+set password for 'root'@'localhost'=password('新密码');
+
+
+
+
 */
 
 
 
+npm config set http-proxy null
 
-
-
-
+// nodejs后台服务器搭建
+https://www.cnblogs.com/mooz88/p/13855092.html
+// mysql  download
+https://downloads.mysql.com/archives/community/
+// uniapp APP实现微信好友、朋友圈分享
+https://www.it610.com/article/1279654845837492224.htm
+// uniapp H5实现微信好友、朋友圈分享
+https://www.jianshu.com/p/127862fffd75
+// uni-app条件编译：#ifdef #ifndef #endif
+http://t.zoukankan.com/shurun-p-11935451.html
 
 
 
