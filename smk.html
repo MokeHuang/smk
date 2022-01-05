@@ -3,13 +3,31 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0,minimal-ui">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>零散知识</title>
 </head>
 <body>
 	<div>
 		<h2>空格</h2>
-		&amp;nbsp;	&amp;ensp;	&amp;emsp;	&amp;thinsp;	&amp;zwnj;	&amp;zwj;
+		<pre>
+			&amp;nbsp;	&amp;ensp;	&amp;emsp;	&amp;thinsp;	&amp;zwnj;	&amp;zwj;
+		</pre>
+		
+		<h2>scrollTo方法的平滑滚动</h2>
+		<pre>
+			1.scrollTo(x,y)   //指定滚动到x轴和y轴的位置
+			2.scrollTo(options)  //options有三个参数，（left,top,behavior ）,
+			top 等同于  y-coord
+			left 等同于  x-coord
+			behavior  类型String,表示滚动行为,支持参数 smooth(平滑滚动),instant(瞬间滚动),默认值auto,实测效果等同于instant
+			   window.scrollTo({
+			                    top: 0,
+			                    behavior: "smooth"
+			                });
+		</pre>
+		
+
 	</div>
 </body>
 </html>

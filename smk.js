@@ -29,26 +29,72 @@ flush privileges;
 set password for 'root'@'localhost'=password('新密码');
 
 
+npm config set http-proxy null
 
 
 */
 
+// 常用APP的 URL Scheme
+// APP 微信 支付宝 淘宝 微博 QQ 知乎 短信
+// URL Scheme weixin:// alipay:// taobao:// sinaweibo:// mqq:// zhihu:// sms://
+//通用 market://details?id=com.tencent.android.qqdownloader
+//华为市场 appmarket://details?id=com.tencent.android.qqdownloader
+//小米商店 mimarket://details?id=com.tencent.android.qqdownloader
+//应用宝  tmast://appdetails?pname='apkName'
+// window.location.href = 'tmast://appdetails?pname=com.tencent.android.qqdownloader';	// 跳转应用宝并下载应用宝
+// window.location.href = 'sms://';
 
 
-npm config set http-proxy null
+// vue自适应 立即执行函数 7.5rem为屏宽 放在App.vue
+(function (doc, win) {
+  let docEl = doc.documentElement
+  let resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'
+  let recalc = function () {
+    var clientWidth = docEl.clientWidth
+    if (!clientWidth) return
+    // if (clientWidth > 750) {
+    //   clientWidth = 750
+    // }
+    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px'
+  }
 
-// nodejs后台服务器搭建
-https://www.cnblogs.com/mooz88/p/13855092.html
-// mysql  download
-https://downloads.mysql.com/archives/community/
-// uniapp APP实现微信好友、朋友圈分享
-https://www.it610.com/article/1279654845837492224.htm
-// uniapp H5实现微信好友、朋友圈分享
-https://www.jianshu.com/p/127862fffd75
-// uni-app条件编译：#ifdef #ifndef #endif
-http://t.zoukankan.com/shurun-p-11935451.html
+  if (!doc.addEventListener) return
+  win.addEventListener(resizeEvt, recalc, false)
+  doc.addEventListener('DOMContentLoaded', recalc, false)
+})(document, window)
 
 
+// 深拷贝
+Object.assign() // 合并方法  实现一层深拷贝	当对象中有多级属性时，二级属性后就是浅拷贝
+// 1.递归实现深拷贝
+function deepClone(obj){
+    let objClone = Array.isArray(obj)?[]:{};
+    if(obj && typeof obj==="object"){
+        for(key in obj){
+            if(obj.hasOwnProperty(key)){
+                //判断ojb子元素是否为对象，如果是，递归复制
+                if(obj[key]&&typeof obj[key] ==="object"){
+                    objClone[key] = deepClone(obj[key]);
+                }else{
+                    //如果不是，简单复制
+                    objClone[key] = obj[key];
+                }
+            }
+        }
+    }
+    return objClone;
+}    
+let a=[1,2,3,4],
+    b=deepClone(a);
+a[0]=2;
+console.log(a,b);
+
+//	2.暴力 function、undefined、symbol会被忽略
+function deepCopy(obj1){
+    let _obj = JSON.stringify(obj1);
+    let obj2 = JSON.parse(_obj);
+    return obj2;
+}
 
 
 
@@ -101,3 +147,40 @@ function getParam(paramName) {
     }
     return paramValue == "" && (paramValue = null), paramValue
 }
+
+/**
+ * uniapp代理
+ */
+"h5" : {
+	"devServer": {
+	  "disableHostCheck": true,
+	  "proxy": {
+		"/API": {
+		  "target": "https://www.suibo.tv",
+		  "changeOrigin": true,
+		  "secure": false,
+		  "pathRewrite": {
+			  "^/API":""
+		  }
+		}
+	  }
+	}
+},
+/**
+ * vue代理
+ */
+devServer: {
+    // host: 'localhost', // 主机地址
+    port: 8080, // 端口
+    open: true,
+    proxy: {
+      '/API': {
+        target: 'http://www.suibo.tv', // 真实地址
+        changeOrigin: true,
+        secure: false,
+        pathRewrite: {
+          '^/API': ''
+        }
+      }
+    }
+},

@@ -16,3 +16,40 @@
 	-webkit-line-clamp: 2;
 }
 
+/* 文字渐变 */
+.text{
+	background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.83) 0%, #FFD300 100%);
+	/* -webkit-gradient(linear, left 0, right 0, from(rgb(255, 188, 188)), to(rgb(255, 33, 33))); */
+	-webkit-background-clip: text; /*必需加前缀 -webkit- 才支持这个text值 */
+	-webkit-text-fill-color: transparent; /*text-fill-color会覆盖color所定义的字体颜色： */
+}
+
+/* 隐藏滚动条 */
+.scroll{
+	max-height: 500rpx;
+	overflow-x: hidden;
+	overflow-y: auto;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE 10+ */
+	::-webkit-scrollbar {
+	  display: none; /* Chrome Safari */
+	}
+}
+
+@keyframes changDeg{
+	0%{
+		transform: rotate(0deg);
+	}
+	60%{
+		transform: rotate(0deg);
+	}
+	75%{
+		transform: rotate(-10deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+.anim{
+	animation:changDeg 2s linear 0.2s infinite;
+}

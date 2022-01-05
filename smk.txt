@@ -16,12 +16,31 @@ texturePacker	//图集工具
 MasterGo 	//一站式产品设计工具 蓝湖
 XAMPP 		//Mac 数据库工具
 WampServer	//windows 数据库工具
+iWall		//动态壁纸，动态桌面的Mac软件
 
 
-http://code.ciaoca.com/	//前端开发仓库
-http://frontendjs.com/	//前站导航
-https://www.bootcdn.cn/mui/	//mui
-https://tinypng.com/	//图片压缩网站
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>	//jquery
 
+http://code.ciaoca.com/			//前端开发仓库
+http://frontendjs.com/			//前站导航
+https://www.bootcdn.cn/mui/		//mui
+https://tinypng.com/			//图片压缩网站
+https://js.design/workspace		//在线ps
+https://nodejs.52kfw.cn/		//基于 Node.js 的服务端开发
+https://es6.ruanyifeng.com/		//《ECMAScript 6 入门教程》阮一峰
+https://zh.1lib.pl/plans.php		// 免费图书馆
+
+
+
+
+https://blog.csdn.net/qq_35376561/article/details/103611368		// H5唤起主流安卓应用市场
+https://www.cnblogs.com/mooz88/p/13855092.html			// nodejs后台服务器搭建
+https://downloads.mysql.com/archives/community/			// mysql  download
+https://www.it610.com/article/1279654845837492224.htm	// uniapp APP实现微信好友、朋友圈分享
+https://www.jianshu.com/p/127862fffd75					// uniapp H5实现微信好友、朋友圈分享
+http://t.zoukankan.com/shurun-p-11935451.html			// uni-app条件编译：#ifdef #ifndef #endif
 
 朴灵 《深入浅出node.js》
+
+阿特伍德定律（Atwood's Law），指的是“any application that can be written in JavaScript, will eventually be written in JavaScript”
+意即“任何可以用JavaScript来写的应用，最终都将用JavaScript来写”
